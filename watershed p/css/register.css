@@ -1,0 +1,137 @@
+/* CSS RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* Box Model */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-ms-viewport {
+		width: device-width;
+	}
+	
+	body {
+	    font-family: Helvetica, sans-serif;
+	}
+	
+	table {
+	    margin: 2em auto;
+	    border-collapse: collapse;
+	}
+	   td {
+	     border: 1px solid grey;
+	     padding: 1em;
+	 }
+	
+	th {
+	    background-color: #123;
+	    color: #fff;
+	    padding: 1em;
+	}
+	
+	td {
+	    text-align: center;
+	}
+	
+	input.toggle-round + label {
+  width: 6em;
+  height: 3em;
+  -webkit-border-radius: 2.5em;
+  -moz-border-radius: 2.5em;
+  -ms-border-radius: 2.5em;
+  -o-border-radius: 2.5em;
+  border-radius: 2.5em;
+}
+
+
+input.toggle-round + label:before, input.toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  bottom: 0.3em;
+  content: "";
+}
+
+input.toggle-round + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 4em;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+}
+input.toggle-round + label:after {
+  width: 2.5em;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+}
+input.toggle-round:checked + label:before {
+  background-color: #123;
+}
+input.toggle-round:checked + label:after {
+  margin-left: 3.5em;
+}
+
+.toggle {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+}
+
+	
+	
+	
+	
+	
+	

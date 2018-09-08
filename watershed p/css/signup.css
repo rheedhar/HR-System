@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css');
+
+/* CSS RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* Box Model */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@-ms-viewport {
+		width: device-width;
+	}
+ html, body {
+   height: 100%;
+   font-family: Helvetica, sans-serif;
+ }
+
+ body, input, select, textarea {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4em;
+    letter-spacing: 0.02em;
+    text-transform: initial;
+    font-weight: 400;
+  }
+  
+  @media screen and (max-width: 736px){
+    body {
+    font-size: 14px;
+    line-height: 1.2em;
+    }
+  }
+
+ 
+ .navBar {
+	position: fixed;
+	min-width: 100%;
+	background-color: #123;
+}
+
+.logo {
+	background-color:  #830300;
+	padding: 0.7em;
+	font-weight: 600;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0.5em 0;
+}
+
+   .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+		padding: 0 1em;
+  }
+
+	ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+	}
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: all .5s ease;
+    }
+
+	a:hover {
+    	color: #ed4933;
+	}
+
+   li  {
+     display: inline-block;
+   }
+
+
+	#footer {
+		    padding: 6em 0 4em 0 ;
+				background-color: #123;
+				text-align: center;
+	}
+
+	#footer .copyright {
+				color: rgba(255, 255, 255, 0.5);
+				font-size: 0.8em;
+				letter-spacing: 0.225em;
+				list-style: none;
+				padding: 0;
+				text-transform: uppercase;
+			}
+
+			@media screen and (max-width: 736px){
+				.copyright {
+					font-size: 0.6em;
+				}
+			}
+
+#menu-toggle {
+	display: none;
+}
+
+.label-toggle {
+	display: none;
+}
+
+wrapper ul li  {
+	position: relative;
+}
+
+.wrapper ul li ul{
+	position: absolute;
+	width: 7em;
+	background-color: #123;
+	padding-top: 1em;
+	display: none;
+}
+
+.wrapper ul li:hover > ul,
+ul li ul:hover {
+  display: block;
+}
+
+.wrapper ul li ul li:hover{
+	cursor: pointer;
+}
+
+.wrapper ul li ul li {
+	padding: 1em;
+}
+
+
+@media screen and (max-width: 736px) {
+  .wrapper ul {
+ display: block;
+ height: 0;
+ opacity: 0;
+ text-align: center;
+ transition: all 1s ease;
+ width: 100%;
+ visibility: hidden;
+		}
+
+	.wrapper ul	li {
+			border-bottom: 1px solid #fff;
+      color: black;
+      display: block;
+      font-size: 1.3em;
+      padding: 1.5em 2em;
+		}
+
+		#menu-toggle:checked ~ ul {
+			opacity: 1;
+			visibility: visible;
+			height: 100vh;
+		}
+
+		.label-toggle {
+			color: #fff;
+      display: block;
+      float: right;
+			font-family: fontawesome;
+      padding: 1em 0;
+      font-size: 1.5em;
+      /*margin-top: 1em;*/
+    }
+
+		.wrapper {
+			display: block;
+		}
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    font-family: "Open Sans", Helvetica, sans-serif;
+  }
+
+  .container {
+    margin-top: 1em;
+    width: 28.125em;
+    display: flex;
+    flex-direction: column;
+    /*background:rgba(58,63,68,0.5);*/
+    border-radius: 0.3125em;
+    border-top: 0.0625em solid #f1f1f5;
+    box-shadow: 0 0.125em 0.25em 0 rgba(181,181,181,.7);
+  }
+  
+  @media screen and (max-width: 736px){
+		.container {
+		   width: 24em;	
+		}
+	}
+
+  .sign_logo {
+    text-align: center;
+    padding: 1.25em 1.25em 0;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    letter-spacing: 0.012em;
+  }
+
+  .input {
+    padding: 1em;
+  }
+
+  input{
+    -webkit-apperance: none;
+    border: none;
+    padding: 1em;
+    border-radius: 0;
+    width: 100%;
+    border-bottom: 1px solid #c6c9cc;
+    margin-top: 0.5em;
+    outline: none;
+
+  }
+
+  input[type="submit"] {
+    border-radius: 0.5em;
+    background-color: #ed4933;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  input[type="submit"]:hover {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .sign_logo {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  .error, #success {
+    color: red;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+  }
+
+  #success {
+    color: blue;
+  }
